@@ -86,6 +86,19 @@ def print_degrees(graph: EdgeWeightedDigraph) -> None:
         print(f"{vertex:<7} | {in_degree:>7} | {out_degree:>5} | {delta:>5}")
 
 
+def load_original_cost_if_available(input_path: Path) -> int | None:
+    """Retorna o custo do grafo original quando houver arquivo correspondente."""
+    if input_path.name != "entrada_eulerizada.txt":
+        return None
+
+    original_path = input_path.with_name("entrada_original.txt")
+    if not original_path.exists():
+        return None
+
+    original_graph, _, _ = parse_input_file(original_path)
+    return original_graph.total_weight()
+
+
 def main() -> int:
     file_arg = sys.argv[1] if len(sys.argv) > 1 else None
 
@@ -118,7 +131,17 @@ def main() -> int:
         print("Circuito euleriano")
         print(" -> ".join(cycle))
         print()
-        print(f"Custo total: {solver.total_cost()}")
+
+        total_cost = solver.total_cost()
+        original_cost = load_original_cost_if_available(input_path)
+
+        if original_cost is not None:
+            additional_cost = total_cost - original_cost
+            print(f"Custo original: {original_cost}")
+            print(f"Custo adicional (eulerizacao): {additional_cost}")
+            print(f"Custo total: {total_cost}")
+        else:
+            print(f"Custo total: {total_cost}")
 
         return 0
     except Exception as exc:
