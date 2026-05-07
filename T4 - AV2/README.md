@@ -44,3 +44,6 @@ maquina local. Se preferir no Windows, tambem funciona usar barra invertida:
 ```bat
 java Main ..\dados\usa13509.txt
 ```
+
+## Vídeo
+https://drive.google.com/file/d/160mhrGLHXx2KNdTV77cs0wfASspRAXG0/view?usp=drive_link
