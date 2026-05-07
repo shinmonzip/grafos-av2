@@ -47,5 +47,5 @@ python3 src/main.py dados/invalid-ciclo3.txt dados/iso-path4-a.txt
 
 ## Vídeo
 
-Parte 1: https://drive.google.com/file/d/15aj0-ETncOLYOv-ADStiNKpzQs7Dn3q6/view?usp=drive_link
+Parte 1: https://drive.google.com/file/d/15aj0-ETncOLYOv-ADStiNKpzQs7Dn3q6/view?usp=drive_link  
 Parte 2: https://drive.google.com/file/d/1YKr41VI9oGSC3yQxtKkmqzqJRo2T-qn1/view?usp=drive_link
