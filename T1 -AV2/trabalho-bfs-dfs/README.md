@@ -45,3 +45,4 @@ Mapeamento de vertices em ordem alfabetica (exigencia do enunciado):
 Arestas em ordem crescente (`v w`) no arquivo `dados/nordeste.txt`.
 
 ## Vídeo
+https://drive.google.com/file/d/1rDaZFnKcF8r3mN7vOo0jVGmyfGJ49nys/view?usp=drive_link
